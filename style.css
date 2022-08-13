@@ -234,7 +234,7 @@ ul.users-option-list li .log-out-btn {
   transition: 0.2s;
 }
 
-.sidebar-list li span {
+.sidebar-list li span,.sidebar-list li svg {
   pointer-events: none;
 }
 
@@ -261,12 +261,8 @@ ul.users-option-list li .log-out-btn {
   transition: 0.3s;
 }
 
-.sidebar-list li.logs-list svg.arrow-down {
-  position: absolute;
-  right: 0;
-  transition: 0.3s;
-  pointer-events: all;
-}
+
+
 
 li.logs-list .list-item {
   display: flex;
@@ -274,6 +270,12 @@ li.logs-list .list-item {
   justify-content: space-between;
   pointer-events: none;
 
+}
+.sidebar-list li.logs-list svg.arrow-down {
+  position: absolute;
+  right: 0;
+  transition: 0.3s;
+  pointer-events: all;
 }
 
 .dropdown-logs {
@@ -321,7 +323,12 @@ li.logs-list .list-item {
 .sidebar-list li.active svg path {
   fill: var(--helper);
 }
+li.logs-list.active svg.dp-0 path,
+li.logs-list.active svg.dp-1 path,
+li.logs-list.active svg.dp-2 path{
+fill: var(--para-tint);
 
+}
 .sidebar-list li.active svg.arrow-down path {
   fill: initial;
 }
@@ -574,9 +581,18 @@ ul.notify-list li {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
 
 }
-
+ul.notify-list li:nth-child(3)::before,
+ul.notify-list li:nth-child(5)::before {
+ content: "";
+ height: 2px;
+ width: 100%;
+ background-color: var(--bg-grey);
+ position: absolute;
+ bottom: 0;
+}
 .n-data {
   color: var(--para-tint);
 }

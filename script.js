@@ -47,11 +47,16 @@ sidebarlist.addEventListener('click',(e)=>{
         })
         e.target.classList.add("active");
         const active_id = document.getElementById(id);
+        if(id !== logs){
+         logsdropdown.classList.remove("show");
+         logssvg.classList.remove("arrowup");
+        }
       //   console.log(id)
         maincontent.forEach((content)=>{
          content.classList.remove("display");
         })
         active_id.classList.add("display");
+
     }
    
 });
