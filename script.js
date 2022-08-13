@@ -47,7 +47,7 @@ sidebarlist.addEventListener('click',(e)=>{
         })
         e.target.classList.add("active");
         const active_id = document.getElementById(id);
-        if(id !== logs){
+        if(id !== "logs" && id !== "sb-lookup" && id !== "daily-usage" ){
          logsdropdown.classList.remove("show");
          logssvg.classList.remove("arrowup");
         }
