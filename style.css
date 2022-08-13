@@ -778,7 +778,7 @@ input:checked+.n-data {
   }
   .slider {
     width: 25px !important;
-    height: 15px !important;
+    height: 14px !important;
   }
   
   .slider::before {
@@ -787,9 +787,9 @@ input:checked+.n-data {
   }
   
   input:checked+.slider::before {
-    -webkit-transform: translateX(7px);
-    -ms-transform: translateX(7px);
-    transform: translateX(7px);
+    -webkit-transform: translateX(11px);
+    -ms-transform: translateX(11px);
+    transform: translateX(11px);
   }
   /* .top-navbar {
     height: 140px;
@@ -880,8 +880,8 @@ margin: 0 !important;
 .slider::before {
   height: 16px;
   width: 16px;
-  left: 2px;
-  bottom: 2px;
+  left: 1px;
+  bottom: 1px;
 }
 }
 
